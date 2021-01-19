@@ -1,8 +1,8 @@
 cloud:
   aws:
     credentials:
-      access-key: 
-      secret-key: 
+      access-key:
+      secret-key:
     region:
       static: us-east-1
     stack:
@@ -20,5 +20,14 @@ spring:
       file-size-threshold: 2MB
       max-file-size: 5MB
       max-request-size: 10MB
+  h2:
+    console:
+      enabled: true
+  datasource:
+      url: jdbc:h2:mem:testdb
+      username: sa
+      password :
+
+
 
 

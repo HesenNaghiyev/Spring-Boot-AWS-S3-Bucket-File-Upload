@@ -22,5 +22,20 @@
 <h1 style="color: red" th:text="${'Successfully uploaded '+ fileName}"></h1>
 </div>
 
+
+<div th:unless="${keys==null}">
+<table>
+    <tr>
+        <th>FileName</th>
+        <th>Image</th>
+    </tr>
+
+    <tr th:each="key : ${keys}">
+        <td th:text="${key.fileName}"></td>
+        <td> <img width="200" height="200" th:src="@{'/upload/get/' +${key.fileName}} "></td>
+    </tr>
+</table>
+</div>
+
 </body>
 </html>
